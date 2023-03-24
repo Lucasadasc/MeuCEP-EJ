@@ -6,14 +6,9 @@
 body{
     color: #ffffff;
     background:  rgb(209, 208, 208);
+}
 
-}
-body, input, button, textarea{
-    font: 600 18px Nunito, sans-serif;
-}
 body #pagina{
-    width: 100vw;
-    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -124,4 +119,7 @@ body #pagina #lista #resultados #cabecalho button:hover{
 }
 body #pagina #lista #resultados #local{
     padding: 5px;
+
+    display: flex;
+    flex-direction: column;
 }
