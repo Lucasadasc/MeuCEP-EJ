@@ -27,7 +27,7 @@ function exibirCEP() {
                     var local = [cep, data.uf, data.logradouro, data.bairro, data.localidade]
                     dados.push(local)
                     const gerarLista = conte(inicio = 1, dados.length)
-                        .map(i => `<div id="resultados"><div id="cabecalho"><h3>${dados[i - 1][0]}</h3><button onclick="excluirCEP(${i - 1})">X</button></div><div id="local"><small id="lograsmall" class="form-text text-muted">Logradouro</small><span id="a" >${dados[i - 1][2]}</span><small id="bairrosmall" class="form-text text-muted">Bairro</small><span>${dados[i - 1][3]}</span><small id="localsmall" class="form-text text-muted">Localidade</small><span>${dados[i - 1][4]}</span><small id="ufsmall" class="form-text text-muted">UF</small><span>${dados[i - 1][1]}</span></div></div>`)
+                        .map(i => `<div id="resultados" class="card" style="width: 20rem;" ><div id="cabecalho"><h3>${dados[i - 1][0]}</h3><button class="btn btn-danger" onclick="excluirCEP(${i - 1})">X</button></div><div id="local"><small id="lograsmall" class="form-text text-muted">Logradouro</small><span id="a" >${dados[i - 1][2]}</span><small id="bairrosmall" class="form-text text-muted">Bairro</small><span>${dados[i - 1][3]}</span><small id="localsmall" class="form-text text-muted">Localidade</small><span>${dados[i - 1][4]}</span><small id="ufsmall" class="form-text text-muted">UF</small><span>${dados[i - 1][1]}</span></div></div>`)
                         .join('');
                     lista.innerHTML = gerarLista;
                 })
@@ -42,7 +42,7 @@ function excluirCEP(num) {
     dados.splice(num, 1)
 
     const gerarLista = conte(inicio = 1, dados.length)
-        .map(i => `<div id="resultados"><div id="cabecalho"><h3>${dados[i - 1][0]}</h3><button onclick="excluirCEP(${i - 1})">X</button></div><div id="local"><small id="lograsmall" class="form-text text-muted">Logradouro</small><span id="a" >${dados[i - 1][2]}</span><small id="bairrosmall" class="form-text text-muted">Bairro</small><span>${dados[i - 1][3]}</span><small id="localsmall" class="form-text text-muted">Localidade</small><span>${dados[i - 1][4]}</span><small id="ufsmall" class="form-text text-muted">UF</small><span>${dados[i - 1][1]}</span></div></div>`)
+        .map(i => `<div id="resultados" class="card" style="width: 20rem;" ><div id="cabecalho"><h3>${dados[i - 1][0]}</h3><button class="btn btn-danger" onclick="excluirCEP(${i - 1})">X</button></div><div id="local"><small id="lograsmall" class="form-text text-muted">Logradouro</small><span id="a" >${dados[i - 1][2]}</span><small id="bairrosmall" class="form-text text-muted">Bairro</small><span>${dados[i - 1][3]}</span><small id="localsmall" class="form-text text-muted">Localidade</small><span>${dados[i - 1][4]}</span><small id="ufsmall" class="form-text text-muted">UF</small><span>${dados[i - 1][1]}</span></div></div>`)
         .join('');
     lista.innerHTML = gerarLista;
 }

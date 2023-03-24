@@ -21,11 +21,11 @@
         <div id="barra">
             <h1>MEU CEP</h1>
         </div>
-        <div id="conteudo">
+        <div id="conteudo" class="card" style="width: 20rem;">
             <h2>Insira o CEP a ser analisado: </h2>
             <form class="cep" name="cepinserido">
-                <input id="cep" type="text" placeholder="00.000-000" maxlength="10">
-                <button type="reset" onclick="exibirCEP()">Pesquisar</button>
+                <input id="cep" class="form-control" type="text" placeholder="00.000-000" maxlength="10">
+                <button type="reset" class="btn btn-outline-success" onclick="exibirCEP()">Pesquisar</button>
             </form>
         </div>
         <div id="lista"></div>
