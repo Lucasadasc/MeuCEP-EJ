@@ -93,7 +93,7 @@ submit.addEventListener("click", async function () {
   let response = await buscar_cep(cep_digitado);
 
   if (!response.erro) {
-    dados.push(response.local);
+    dados.unshift(response.local);
     renderHTML(dados);
 
     let remover = document.querySelector(".remover");
